@@ -1,0 +1,38 @@
+task {
+  set_family = {
+     generic = {
+        transfer_asap = false
+     }
+  }
+  task = generic
+}
+
+fep_absolute_binding_md_launcher {
+  md_job = [
+     [-HOST "$SUBHOST:1" -cpu 1 -mode umbrella -m "absolute_binding_ITK-Inactive-J13-2_run03_md.msj" -lic "FEP_GPGPU:16" ]
+  ]
+  transfer_asap = true
+}
+
+fep_absolute_binding_fep_launcher {
+  dispatch = {
+     charge = [
+        [-HOST "$SUBHOST:4" -cpu 1 -mode umbrella -m "ogawa20211020T075018_complex_charge.extend.msj" -o "$MASTERJOBNAME_$JOBTAG_complex-out.mae" -JOBNAME "$MASTERJOBNAME_$JOBTAG_complex" ]
+        [-HOST "$SUBHOST:4" -cpu 1 -mode umbrella -m "ogawa20211020T075018_solvent_charge.extend.msj" -o "$MASTERJOBNAME_$JOBTAG_solvent-out.mae" -JOBNAME "$MASTERJOBNAME_$JOBTAG_solvent" ]
+     ]
+     default = [
+        [-HOST "$SUBHOST:4" -cpu 1 -mode umbrella -m "ogawa20211020T075018_complex.extend.msj" -o "$MASTERJOBNAME_$JOBTAG_complex-out.mae" -JOBNAME "$MASTERJOBNAME_$JOBTAG_complex" ]
+        [-HOST "$SUBHOST:4" -cpu 1 -mode umbrella -m "ogawa20211020T075018_solvent.extend.msj" -o "$MASTERJOBNAME_$JOBTAG_solvent-out.mae" -JOBNAME "$MASTERJOBNAME_$JOBTAG_solvent" ]
+     ]
+  }
+  input_graph_file = "absolute_binding_ITK-Inactive-J13-2_run03_out.fmp"
+  restart = {
+     charge = [15 16 ]
+     default = [15 16 ]
+  }
+  transfer_asap = true
+}
+
+fep_absolute_binding_analysis {
+  input_graph_file = "absolute_binding_ITK-Inactive-J13-2_run03_out.fmp"
+}

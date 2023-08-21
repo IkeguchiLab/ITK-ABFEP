@@ -1,0 +1,182 @@
+/home/schrodinger/SCHRODINGER_2020-4-r/fep_absolute_binding absolute_binding_ITK-Inactive-J31-alt_run03.maegz -SUBHOST sevenstar_gpu -ppj 4 -maxjob 0 -ensemble muVT -fep-sim-time 5000.0 -md-sim-time 5000.0 -seed 2003 -OPLSDIR opls_dir -JOBNAME absolute_binding_ITK-Inactive-J31-alt_run03 -HOST sevenstar_cpu -VIEWNAME AbfeJob -PROJ /home/ogawa/FEP/20210715_ITK_YCU_ABFEP/01-working.prj
+Job launching command:
+$SCHRODINGER/utilities/multisim absolute_binding_ITK-Inactive-J31-alt_run03.maegz -HOST sevenstar_cpu -SUBHOST sevenstar_gpu -JOBNAME absolute_binding_ITK-Inactive-J31-alt_run03 -maxjob 0 -m absolute_binding_ITK-Inactive-J31-alt_run03.msj -RETRIES 1 -NICE -OPLSDIR opls_dir -o absolute_binding_ITK-Inactive-J31-alt_run03-out.mae -encoded_description L2hvbWUvc2Nocm9kaW5nZXIvU0NIUk9ESU5HRVJfMjAyMC00LXIvZmVwX2Fic29sdXRlX2JpbmRpbmcgYWJzb2x1dGVfYmluZGluZ19JVEstSW5hY3RpdmUtSjMxLWFsdF9ydW4wMy5tYWVneiAtU1VCSE9TVCBzZXZlbnN0YXJfZ3B1IC1wcGogNCAtbWF4am9iIDAgLWVuc2VtYmxlIG11VlQgLWZlcC1zaW0tdGltZSA1MDAwLjAgLW1kLXNpbS10aW1lIDUwMDAuMCAtc2VlZCAyMDAzIC1PUExTRElSIG9wbHNfZGlyIC1KT0JOQU1FIGFic29sdXRlX2JpbmRpbmdfSVRLLUluYWN0aXZlLUozMS1hbHRfcnVuMDMgLUhPU1Qgc2V2ZW5zdGFyX2NwdSAtVklFV05BTUUgQWJmZUpvYiAtUFJPSiAvaG9tZS9vZ2F3YS9GRVAvMjAyMTA3MTVfSVRLX1lDVV9BQkZFUC8wMS13b3JraW5nLnByag==
+
+Booting the multisim workflow engine...
+           multisim version: 3.8.5.19
+            mmshare version: 5.2
+                    Jobname: absolute_binding_ITK-Inactive-J31-alt_run03
+                   Username: ogawa
+            Master job host: sevenstar
+                Subjob host: sevenstar_gpu
+                     Job ID: sevenstar-0-61585259
+            multisim script: absolute_binding_ITK-Inactive-J31-alt_run03.msj
+       Structure input file: absolute_binding_ITK-Inactive-J31-alt_run03.maegz
+            CPUs per subjob: "1"
+             Job start time: Sat Oct  2 21:36:51 2021
+           Launch directory: /home/ogawa/FEP/20210715_ITK_YCU_ABFEP/absolute_binding_ITK-Inactive-J31-alt_run03
+               $SCHRODINGER: /home/schrodinger/SCHRODINGER_2020-4-r
+
+Parsing the multisim script file...
+
+Summary of user stages:
+  stage 1 - task
+  stage 2 - fep_absolute_binding_md_launcher
+  stage 3 - fep_absolute_binding_fep_launcher
+  stage 4 - fep_absolute_binding_analysis
+(4 stages in total)
+
+Workflow is started now.
+
+Stage 1 - task
+stage[1] task: Detecting system type...
+stage[1] task:   It seems 
+stage[1] task: Recognizing traits of system...
+stage[1] task:   (none)
+
+Stage 1 completed successfully.
+Stage 1 duration: 0h 0' 0"
+
+
+Stage 2 - fep_absolute_binding_md_launcher
+[running at reduced cpu priority]
+
+Running subjobs on hosts:
+  sevenstar_gpu (Max: No limit)
+Number of jobs:       1
+Max retries per job:  1
+Max allowed failures: unlimited
+Run with -LOCAL:      False
+Verbosity:            normal
+
+Starting JobDJ...
+
+Keep one job on driver host: False
+JobDJ columns:
+  C: Number of completed subjobs
+  A: Number of active subjobs (e.g., submitted, running)
+  W: Number of waiting/pending subjobs
+
+C A W | Activity  JobId  JobName  JobHost
+- - - | --------- -----------------------
+0 1 0 | launched  sevenstar-0-61585266 absolute_binding_ITK-Inactive-J31-alt_run03_551438c sevenstar_gpu
+1 0 0 | finished  sevenstar-0-61585266 absolute_binding_ITK-Inactive-J31-alt_run03_551438c sevenstar_gpu [sevenstar]
+
+All jobs have completed.
+
+1 of 1 job(s) succeeded; 0 job(s) failed.
+
+
+Job("sevenstar-0-61585266") was successfully finished.
+  Host       : localhost
+  Launch time: Sat Oct  2 21:36:54 2021
+  Start time : Sat Oct  2 22:27:35 2021
+  End time   : Sat Oct  2 22:50:11 2021
+  Duration   : 0h 22' 36"
+  CPUs       : 1
+  CPU time   : 0h 22' 36"
+  Exit code  : 0
+  Jobname    : absolute_binding_ITK-Inactive-J31-alt_run03_551438c
+  Stage      : 2 (fep_absolute_binding_md_launcher)
+Stage 2 duration: 1h 13' 20"
+
+
+Stage 2 completed successfully.
+
+Stage 2 duration: 1h 13' 20"
+
+
+Stage 3 - fep_absolute_binding_fep_launcher
+
+Running subjobs on hosts:
+  sevenstar_gpu (Max: No limit)
+Number of jobs:       2
+Max retries per job:  1
+Max allowed failures: unlimited
+Run with -LOCAL:      False
+Verbosity:            normal
+
+Starting JobDJ...
+
+Keep one job on driver host: False
+JobDJ columns:
+  C: Number of completed subjobs
+  A: Number of active subjobs (e.g., submitted, running)
+  W: Number of waiting/pending subjobs
+
+C A W | Activity  JobId  JobName  JobHost
+- - - | --------- -----------------------
+0 1 1 | launched  sevenstar-0-61586396 absolute_binding_ITK-Inactive-J31-alt_run03_551438c_complex sevenstar_gpu
+0 2 0 | launched  sevenstar-0-61586399 absolute_binding_ITK-Inactive-J31-alt_run03_551438c_solvent sevenstar_gpu
+1 1 0 | finished  sevenstar-0-61586396 absolute_binding_ITK-Inactive-J31-alt_run03_551438c_complex sevenstar_gpu [sevenstar]
+2 0 0 | finished  sevenstar-0-61586399 absolute_binding_ITK-Inactive-J31-alt_run03_551438c_solvent sevenstar_gpu [sevenstar]
+
+All jobs have completed.
+
+2 of 2 job(s) succeeded; 0 job(s) failed.
+
+
+Job("sevenstar-0-61586396") was successfully finished.
+  Host       : localhost
+  Launch time: Sat Oct  2 22:50:14 2021
+  Start time : Sat Oct  2 22:51:05 2021
+  End time   : Sun Oct  3 05:37:54 2021
+  Duration   : 6h 46' 49"
+  CPUs       : 1
+  CPU time   : 6h 46' 49"
+  Exit code  : 0
+  Jobname    : absolute_binding_ITK-Inactive-J31-alt_run03_551438c_complex
+  Stage      : 3 (fep_absolute_binding_fep_launcher)
+Stage 3 duration: 9h 30' 56"
+
+
+Job("sevenstar-0-61586399") was successfully finished.
+  Host       : localhost
+  Launch time: Sat Oct  2 22:50:17 2021
+  Start time : Sun Oct  3 05:38:20 2021
+  End time   : Sun Oct  3 08:21:07 2021
+  Duration   : 2h 42' 47"
+  CPUs       : 1
+  CPU time   : 2h 42' 47"
+  Exit code  : 0
+  Jobname    : absolute_binding_ITK-Inactive-J31-alt_run03_551438c_solvent
+  Stage      : 3 (fep_absolute_binding_fep_launcher)
+Stage 3 duration: 9h 30' 56"
+
+
+Stage 3 completed successfully.
+
+Stage 3 duration: 9h 30' 56"
+
+
+Stage 4 - fep_absolute_binding_analysis
+run -FROM scisol fep_mapper_cleanup.py absolute_binding_ITK-Inactive-J31-alt_run03-multisim_checkpoint -force -fmp absolute_binding_ITK-Inactive-J31-alt_run03.fmp -out-fmp absolute_binding_ITK-Inactive-J31-alt_run03_out.fmp
+Start cleanup...
+processing: absolute_binding_ITK-Inactive-J31-alt_run03_3/absolute_binding_ITK-Inactive-J31-alt_run03_551438c_complex_16-out.tgz
+Attach sid file for 551438c_complex to out.fmp file
+processing: absolute_binding_ITK-Inactive-J31-alt_run03_3/absolute_binding_ITK-Inactive-J31-alt_run03_551438c_solvent_17-out.tgz
+Attach sid file for 551438c_solvent to out.fmp file
+Writing absolute_binding_ITK-Inactive-J31-alt_run03_out.fmp file...
+Cleanup done.
+   Ligand Title      Ligand Binding DG (kcal/mol)    Ligand Binding DG Error (kcal/mol)
+   --------------  ------------------------------  ------------------------------------
+   J-31-3                                   -11.7                                   0.1
+Results for J-31-3:
+Complex dG: 42.386+-0.0614372
+Complex correction dG: -8.87300210914479
+Solvent dG: 21.7952+-0.0626772
+Final dG: -11.7178+-0.0877665
+Number of new compounds completed in the current job: 1
+
+Stage 4 completed successfully.
+Stage 4 duration: 0h 0' 7"
+
+Cleaning up files...
+
+Multisim summary (Sun Oct  3 08:21:15 2021):
+  Stage 1 completed.
+  Stage 2 completed.
+  Stage 3 completed.
+  Stage 4 completed.
+  Total duration: 10h 44' 24"
+Multisim completed.

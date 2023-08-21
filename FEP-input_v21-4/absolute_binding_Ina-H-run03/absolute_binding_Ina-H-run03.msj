@@ -1,0 +1,46 @@
+task {
+  set_family = {
+     generic = {
+        transfer_asap = false
+     }
+  }
+  task = generic
+}
+
+forcefield_builder_launcher {
+  should_skip = true
+}
+
+fep_absolute_binding_md_launcher {
+  dispatch = {
+     charge = [
+        [-HOST "$SUBHOST:1" -cpu 1 -mode umbrella -m "absolute_binding_Ina-H-run03_chg_md.msj" -o "$MAINJOBNAME_$JOBTAG_md-out.mae" -JOBNAME "$MAINJOBNAME_$JOBTAG_md" ]
+     ]
+     default = [
+        [-HOST "$SUBHOST:1" -cpu 1 -mode umbrella -m "absolute_binding_Ina-H-run03_md.msj" -o "$MAINJOBNAME_$JOBTAG_md-out.mae" -JOBNAME "$MAINJOBNAME_$JOBTAG_md" ]
+     ]
+  }
+  input_graph_file = "absolute_binding_Ina-H-run03.fmp"
+  transfer_asap = true
+}
+
+fep_absolute_binding_fep_launcher {
+  dispatch = {
+     charge = [
+        [-HOST "$SUBHOST:4" -cpu 1 -mode umbrella -m "absolute_binding_Ina-H-run03_chg_complex.msj" -o "$MAINJOBNAME_$JOBTAG_complex-out.mae" -JOBNAME "$MAINJOBNAME_$JOBTAG_complex" ]
+        [-HOST "$SUBHOST:4" -cpu 1 -mode umbrella -m "absolute_binding_Ina-H-run03_chg_solvent.msj" -o "$MAINJOBNAME_$JOBTAG_solvent-out.mae" -JOBNAME "$MAINJOBNAME_$JOBTAG_solvent" ]
+     ]
+     default = [
+        [-HOST "$SUBHOST:4" -cpu 1 -mode umbrella -m "absolute_binding_Ina-H-run03_complex.msj" -o "$MAINJOBNAME_$JOBTAG_complex-out.mae" -JOBNAME "$MAINJOBNAME_$JOBTAG_complex" ]
+        [-HOST "$SUBHOST:4" -cpu 1 -mode umbrella -m "absolute_binding_Ina-H-run03_solvent.msj" -o "$MAINJOBNAME_$JOBTAG_solvent-out.mae" -JOBNAME "$MAINJOBNAME_$JOBTAG_solvent" ]
+     ]
+  }
+  input_graph_file = "absolute_binding_Ina-H-run03.fmp"
+  transfer_asap = true
+}
+
+fep_absolute_binding_analysis {
+  input_graph_file = "absolute_binding_Ina-H-run03.fmp"
+}
+
+

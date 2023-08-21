@@ -1,0 +1,139 @@
+Reboot from the checkpoint: extend_absolute_binding_Act-D-run03-multisim_checkpoint
+
+/home/schrodinger/SCHRODINGER_2021-4/fep_absolute_binding absolute_binding_Act-D-run03.fmp -SUBHOST sevenstar_gpu -HOST sevenstar_cpu -JOBNAME absolute_binding_Act-D-run03 -checkpoint absolute_binding_Act-D-run03-multisim_checkpoint -OPLSDIR absolute_binding_Act-D-run03-out.opls -extend absolute_binding_Act-D-run03.ligand -fep-sim-time 5000.0
+Job launching command:
+$SCHRODINGER/utilities/multisim -HOST sevenstar_cpu -SUBHOST sevenstar_gpu -JOBNAME absolute_binding_Act-D-run03 -RESTART extend_absolute_binding_Act-D-run03-multisim_checkpoint -m absolute_binding_Act-D-run03.extend.msj -d absolute_binding_Act-D-run03_1-out.tgz -d absolute_binding_Act-D-run03_3-out.tgz -d absolute_binding_Act-D-run03_4-out.tgz -ADD_FILE absolute_binding_Act-D-run03_out.fmpdb -RETRIES 1 -OPLSDIR absolute_binding_Act-D-run03-out.opls -o absolute_binding_Act-D-run03-out.mae -encoded_description L2hvbWUvc2Nocm9kaW5nZXIvU0NIUk9ESU5HRVJfMjAyMS00L2ZlcF9hYnNvbHV0ZV9iaW5kaW5nIGFic29sdXRlX2JpbmRpbmdfQWN0LUQtcnVuMDMuZm1wIC1TVUJIT1NUIHNldmVuc3Rhcl9ncHUgLUhPU1Qgc2V2ZW5zdGFyX2NwdSAtSk9CTkFNRSBhYnNvbHV0ZV9iaW5kaW5nX0FjdC1ELXJ1bjAzIC1jaGVja3BvaW50IGFic29sdXRlX2JpbmRpbmdfQWN0LUQtcnVuMDMtbXVsdGlzaW1fY2hlY2twb2ludCAtT1BMU0RJUiBhYnNvbHV0ZV9iaW5kaW5nX0FjdC1ELXJ1bjAzLW91dC5vcGxzIC1leHRlbmQgYWJzb2x1dGVfYmluZGluZ19BY3QtRC1ydW4wMy5saWdhbmQgLWZlcC1zaW0tdGltZSA1MDAwLjA=
+
+Booting the multisim workflow engine...
+           multisim version: 4.0.0
+            mmshare version: 5.6
+                    Jobname: absolute_binding_Act-D-run03
+                   Username: ogawa
+              Main job host: sevenstar
+                Subjob host: sevenstar_gpu
+                     Job ID: sevenstar-0-61e7d3d5
+            multisim script: absolute_binding_Act-D-run03.extend.msj
+       Structure input file: absolute_binding_Act-D-run03_pv.maegz
+            CPUs per subjob: "1"
+             Job start time: Mon Jan 17 09:56:36 2022
+           Launch directory: /home/ogawa/FEP/20211217_ITK_YCU_ABFEP_v21-4/absolute_binding_Act-D-run03
+               $SCHRODINGER: /home/schrodinger/SCHRODINGER_2021-4
+               $OPLS_DIR: absolute_binding_Act-D-run03-out.opls
+
+Parsing the multisim script file...
+
+Checkpoint state:
+  Stage 1 not run.
+  Stage 2 was skipped.
+  Stage 3 not run.
+  Stage 4 not run.
+  Stage 5 not run.
+
+Summary of user stages:
+  stage 1 - task
+  stage 2 - forcefield_builder_launcher
+  stage 3 - fep_absolute_binding_md_launcher
+  stage 4 - fep_absolute_binding_fep_launcher
+  stage 5 - fep_absolute_binding_analysis
+(5 stages in total)
+
+Workflow is started now.
+Updating stages with the new .msj file: /var/tmp/ogawa/absolute_binding_Act-D-run03/absolute_binding_Act-D-run03.extend.msj...
+Stage 4 and after will be affected by the new .msj file.
+Restart workflow from stage 4.
+
+Stage 4 - fep_absolute_binding_fep_launcher
+
+Running subjobs on hosts:
+  sevenstar_gpu (Max: No limit)
+Number of jobs:       2
+Max retries per job:  1
+Max allowed failures: unlimited
+Verbosity:            normal
+
+Starting JobDJ...
+
+Keep one job on driver host: False
+JobDJ columns:
+  C: Number of completed subjobs
+  A: Number of active subjobs (e.g., submitted, running)
+  W: Number of waiting/pending subjobs
+
+C A W | Activity  JobId  JobName  JobHost
+- - - | --------- -----------------------
+0 1 1 | launched  sevenstar-0-61e7d3e3 absolute_binding_Act-D-run03_7c81dac_complex sevenstar_gpu
+0 2 0 | launched  sevenstar-0-61e7d3e7 absolute_binding_Act-D-run03_7c81dac_solvent sevenstar_gpu
+1 1 0 | finished  sevenstar-0-61e7d3e3 absolute_binding_Act-D-run03_7c81dac_complex sevenstar_gpu [sevenstar]
+2 0 0 | finished  sevenstar-0-61e7d3e7 absolute_binding_Act-D-run03_7c81dac_solvent sevenstar_gpu [sevenstar]
+
+All jobs have completed.
+
+2 of 2 job(s) succeeded; 0 job(s) failed.
+
+
+Job("sevenstar-0-61e7d3e3") was successfully finished.
+  Host       : sevenstar_gpu:4
+  Launch time: Wed Jan 19 18:03:31 2022
+  Start time : Thu Jan 20 02:54:51 2022
+  End time   : Thu Jan 20 06:18:50 2022
+  Duration   : 3h 23' 59"
+  CPUs       : 1
+  CPU time   : 3h 23' 59"
+  Exit code  : 0
+  Jobname    : absolute_binding_Act-D-run03_7c81dac_complex
+  Stage      : 4 (fep_absolute_binding_fep_launcher)
+Stage 4 duration: 14h 22' 15"
+
+
+Job("sevenstar-0-61e7d3e7") was successfully finished.
+  Host       : sevenstar_gpu:4
+  Launch time: Wed Jan 19 18:03:35 2022
+  Start time : Thu Jan 20 06:19:34 2022
+  End time   : Thu Jan 20 08:25:41 2022
+  Duration   : 2h 6' 7"
+  CPUs       : 1
+  CPU time   : 2h 6' 7"
+  Exit code  : 0
+  Jobname    : absolute_binding_Act-D-run03_7c81dac_solvent
+  Stage      : 4 (fep_absolute_binding_fep_launcher)
+Stage 4 duration: 14h 22' 15"
+
+
+Stage 4 completed successfully.
+
+Stage 4 duration: 14h 22' 15"
+
+run -FROM scisol fep_mapper_cleanup.py absolute_binding_Act-D-run03-multisim_checkpoint -force -fmp absolute_binding_Act-D-run03_out.fmp -out-fmp absolute_binding_Act-D-run03_out.fmp
+Start cleanup...
+absolute_binding_Act-D-run03_out.fmpdb exists. Making a backup (.bk) file...
+processing: absolute_binding_Act-D-run03_4/absolute_binding_Act-D-run03_7c81dac_complex_16-out.tgz
+Attach sid file for 7c81dac_complex to out.fmp file
+processing: absolute_binding_Act-D-run03_4/absolute_binding_Act-D-run03_7c81dac_solvent_17-out.tgz
+Attach sid file for 7c81dac_solvent to out.fmp file
+Writing absolute_binding_Act-D-run03_out.fmp file...
+Copying content from the existing absolute_binding_Act-D-run03_out.fmpdb.bk...
+Cleanup done.
+   Ligand Title      Ligand Binding DG (kcal/mol)    Ligand Binding DG Error (kcal/mol)
+   --------------  ------------------------------  ------------------------------------
+   cpdD                                      -9.6                                   0.1
+Results for cpdD:
+Complex dG: 111.159+-0.0481475
+Complex correction dG: -9.3927800987215
+Solvent dG: 92.2171+-0.0351632
+Final dG: -9.54912+-0.0596207
+Number of new compounds completed in the current job: 0
+
+Stage 5 completed successfully.
+
+Stage 5 duration: 0h 0' 8"
+
+Cleaning up files...
+
+Multisim summary (Thu Jan 20 08:25:52 2022):
+  Stage 1 not run.
+  Stage 2 was skipped.
+  Stage 3 not run.
+  Stage 4 completed.
+  Stage 5 completed.
+  Total duration: 14h 22' 24"
+Multisim completed.

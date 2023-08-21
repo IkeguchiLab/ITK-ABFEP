@@ -1,0 +1,138 @@
+Reboot from the checkpoint: extend_absolute_binding_ITK-Active-B49_run01-multisim_checkpoint
+
+/home/schrodinger/SCHRODINGER_2020-4-r/fep_absolute_binding absolute_binding_ITK-Active-B49_run01.maegz -SUBHOST sevenstar_gpu -HOST sevenstar_cpu -checkpoint absolute_binding_ITK-Active-B49_run01-multisim_checkpoint -OPLSDIR opls_dir -extend absolute_binding_ITK-Active-B49_run01.ligand -fep-sim-time 5000.0
+Job launching command:
+$SCHRODINGER/utilities/multisim -HOST sevenstar_cpu -SUBHOST sevenstar_gpu -JOBNAME ogawa20210809T120928 -RESTART extend_absolute_binding_ITK-Active-B49_run01-multisim_checkpoint -m ogawa20210809T120928.extend.msj -d absolute_binding_ITK-Active-B49_run01_1-out.tgz -d absolute_binding_ITK-Active-B49_run01_2-out.tgz -d absolute_binding_ITK-Active-B49_run01_3-out.tgz -ADD_FILE absolute_binding_ITK-Active-B49_run01_out.fmpdb -RETRIES 1 -OPLSDIR opls_dir -o ogawa20210809T120928-out.mae -encoded_description L2hvbWUvc2Nocm9kaW5nZXIvU0NIUk9ESU5HRVJfMjAyMC00LXIvZmVwX2Fic29sdXRlX2JpbmRpbmcgYWJzb2x1dGVfYmluZGluZ19JVEstQWN0aXZlLUI0OV9ydW4wMS5tYWVneiAtU1VCSE9TVCBzZXZlbnN0YXJfZ3B1IC1IT1NUIHNldmVuc3Rhcl9jcHUgLWNoZWNrcG9pbnQgYWJzb2x1dGVfYmluZGluZ19JVEstQWN0aXZlLUI0OV9ydW4wMS1tdWx0aXNpbV9jaGVja3BvaW50IC1PUExTRElSIG9wbHNfZGlyIC1leHRlbmQgYWJzb2x1dGVfYmluZGluZ19JVEstQWN0aXZlLUI0OV9ydW4wMS5saWdhbmQgLWZlcC1zaW0tdGltZSA1MDAwLjA=
+
+Booting the multisim workflow engine...
+           multisim version: 3.8.5.19
+            mmshare version: 5.2
+                    Jobname: ogawa20210809T120928
+                   Username: ogawa
+            Master job host: sevenstar
+                Subjob host: sevenstar_gpu
+                     Job ID: sevenstar-0-61109cbe
+            multisim script: ogawa20210809T120928.extend.msj
+       Structure input file: absolute_binding_ITK-Active-B49_run01.maegz
+            CPUs per subjob: "1"
+             Job start time: Mon Jul 19 07:28:28 2021
+           Launch directory: /home/ogawa/FEP/20210715_ITK_YCU_ABFEP/absolute_binding_ITK-Active-B49_run01
+               $SCHRODINGER: /home/schrodinger/SCHRODINGER_2020-4-r
+
+Parsing the multisim script file...
+
+Checkpoint state:
+  Stage 1 completed.
+  Stage 2 completed.
+  Stage 3 partially completed. 2 subjobs failed, 2 subjobs done.
+    Jobnames of failed subjobs:
+      absolute_binding_ITK-Active-B49_run01_892ed8b_complex
+      absolute_binding_ITK-Active-B49_run01_892ed8b_solvent
+  Stage 4 completed.
+
+Summary of user stages:
+  stage 1 - task
+  stage 2 - fep_absolute_binding_md_launcher
+  stage 3 - fep_absolute_binding_fep_launcher
+  stage 4 - fep_absolute_binding_analysis
+(4 stages in total)
+
+Workflow is started now.
+Updating stages with the new .msj file: /var/tmp/ogawa/ogawa20210809T120928/ogawa20210809T120928.extend.msj...
+Stage 3 and after will be affected by the new .msj file.
+Restart workflow from stage 3.
+
+Stage 3 - fep_absolute_binding_fep_launcher
+
+Running subjobs on hosts:
+  sevenstar_gpu (Max: No limit)
+Number of jobs:       2
+Max retries per job:  1
+Max allowed failures: unlimited
+Run with -LOCAL:      False
+Verbosity:            normal
+
+Starting JobDJ...
+
+Keep one job on driver host: False
+JobDJ columns:
+  C: Number of completed subjobs
+  A: Number of active subjobs (e.g., submitted, running)
+  W: Number of waiting/pending subjobs
+
+C A W | Activity  JobId  JobName  JobHost
+- - - | --------- -----------------------
+0 1 1 | launched  sevenstar-0-61109cd7 ogawa20210809T120928_892ed8b_complex sevenstar_gpu
+0 2 0 | launched  sevenstar-0-61109cda ogawa20210809T120928_892ed8b_solvent sevenstar_gpu
+1 1 0 | finished  sevenstar-0-61109cd7 ogawa20210809T120928_892ed8b_complex sevenstar_gpu [sevenstar]
+2 0 0 | finished  sevenstar-0-61109cda ogawa20210809T120928_892ed8b_solvent sevenstar_gpu [sevenstar]
+
+All jobs have completed.
+
+2 of 2 job(s) succeeded; 0 job(s) failed.
+
+
+Job("sevenstar-0-61109cd7") was successfully finished.
+  Host       : localhost
+  Launch time: Mon Aug  9 12:11:19 2021
+  Start time : Thu Aug 12 14:22:19 2021
+  End time   : Thu Aug 12 21:01:27 2021
+  Duration   : 6h 39' 8"
+  CPUs       : 1
+  CPU time   : 6h 39' 8"
+  Exit code  : 0
+  Jobname    : ogawa20210809T120928_892ed8b_complex
+  Stage      : 3 (fep_absolute_binding_fep_launcher)
+Stage 3 duration: 83h 1' 14"
+
+
+Job("sevenstar-0-61109cda") was successfully finished.
+  Host       : localhost
+  Launch time: Mon Aug  9 12:11:22 2021
+  Start time : Thu Aug 12 21:02:12 2021
+  End time   : Thu Aug 12 23:12:30 2021
+  Duration   : 2h 10' 18"
+  CPUs       : 1
+  CPU time   : 2h 10' 18"
+  Exit code  : 0
+  Jobname    : ogawa20210809T120928_892ed8b_solvent
+  Stage      : 3 (fep_absolute_binding_fep_launcher)
+Stage 3 duration: 83h 1' 14"
+
+
+Stage 3 completed successfully.
+
+Stage 3 duration: 83h 1' 14"
+
+run -FROM scisol fep_mapper_cleanup.py ogawa20210809T120928-multisim_checkpoint -force -fmp absolute_binding_ITK-Active-B49_run01_out.fmp -out-fmp ogawa20210809T120928_out.fmp
+Start cleanup...
+absolute_binding_ITK-Active-B49_run01_out.fmpdb exists. Making a backup (.bk) file...
+processing: absolute_binding_ITK-Active-B49_run01_3/ogawa20210809T120928_892ed8b_complex_16-out.tgz
+Attach sid file for 892ed8b_complex to out.fmp file
+processing: absolute_binding_ITK-Active-B49_run01_3/ogawa20210809T120928_892ed8b_solvent_17-out.tgz
+Attach sid file for 892ed8b_solvent to out.fmp file
+Writing ogawa20210809T120928_out.fmp file...
+Copying content from the existing absolute_binding_ITK-Active-B49_run01_out.fmpdb.bk...
+Cleanup done.
+   Ligand Title      Ligand Binding DG (kcal/mol)    Ligand Binding DG Error (kcal/mol)
+   --------------  ------------------------------  ------------------------------------
+   B49                                      -13.8                                   0.1
+Results for B49:
+Complex dG: 169.1+-0.0572982
+Complex correction dG: -9.19213318581916
+Solvent dG: 146.078+-0.0455208
+Final dG: -13.8299+-0.0731794
+Number of new compounds completed in the current job: 0
+
+Stage 4 completed successfully.
+Stage 4 duration: 0h 0' 9"
+
+Cleaning up files...
+
+Multisim summary (Thu Aug 12 23:12:41 2021):
+  Stage 1 completed.
+  Stage 2 completed.
+  Stage 3 completed.
+  Stage 4 completed.
+  Total duration: 83h 1' 24"
+Multisim completed.

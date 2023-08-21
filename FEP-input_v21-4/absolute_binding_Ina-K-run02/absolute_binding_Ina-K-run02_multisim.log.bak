@@ -1,0 +1,190 @@
+/home/schrodinger/SCHRODINGER_2021-4/fep_absolute_binding absolute_binding_Ina-K-run02.fmp -SUBHOST sevenstar_gpu -ppj 4 -maxjob 0 -ensemble muVT -fep-sim-time 5000.0 -md-sim-time 1000.0 -seed 1009 -OPLSDIR /home/ogawa/.schrodinger/opls_dir/custom_2021_4.opls -JOBNAME absolute_binding_Ina-K-run02 -HOST sevenstar_cpu -VIEWNAME AbfeJob -PROJ /home/ogawa/FEP/20211217_ITK_YCU_ABFEP_v21-4/02-input-2021-4.prj
+Job launching command:
+$SCHRODINGER/utilities/multisim absolute_binding_Ina-K-run02_pv.maegz -HOST sevenstar_cpu -SUBHOST sevenstar_gpu -JOBNAME absolute_binding_Ina-K-run02 -maxjob 0 -m absolute_binding_Ina-K-run02.msj -RETRIES 1 -NICE -OPLSDIR /home/ogawa/.schrodinger/opls_dir/custom_2021_4.opls -o absolute_binding_Ina-K-run02-out.mae -encoded_description L2hvbWUvc2Nocm9kaW5nZXIvU0NIUk9ESU5HRVJfMjAyMS00L2ZlcF9hYnNvbHV0ZV9iaW5kaW5nIGFic29sdXRlX2JpbmRpbmdfSW5hLUstcnVuMDIuZm1wIC1TVUJIT1NUIHNldmVuc3Rhcl9ncHUgLXBwaiA0IC1tYXhqb2IgMCAtZW5zZW1ibGUgbXVWVCAtZmVwLXNpbS10aW1lIDUwMDAuMCAtbWQtc2ltLXRpbWUgMTAwMC4wIC1zZWVkIDEwMDkgLU9QTFNESVIgL2hvbWUvb2dhd2EvLnNjaHJvZGluZ2VyL29wbHNfZGlyL2N1c3RvbV8yMDIxXzQub3BscyAtSk9CTkFNRSBhYnNvbHV0ZV9iaW5kaW5nX0luYS1LLXJ1bjAyIC1IT1NUIHNldmVuc3Rhcl9jcHUgLVZJRVdOQU1FIEFiZmVKb2IgLVBST0ogL2hvbWUvb2dhd2EvRkVQLzIwMjExMjE3X0lUS19ZQ1VfQUJGRVBfdjIxLTQvMDItaW5wdXQtMjAyMS00LnByag==
+
+Booting the multisim workflow engine...
+           multisim version: 4.0.0
+            mmshare version: 5.6
+                    Jobname: absolute_binding_Ina-K-run02
+                   Username: ogawa
+              Main job host: sevenstar
+                Subjob host: sevenstar_gpu
+                     Job ID: sevenstar-0-625d4a85
+            multisim script: absolute_binding_Ina-K-run02.msj
+       Structure input file: absolute_binding_Ina-K-run02_pv.maegz
+            CPUs per subjob: "1"
+             Job start time: Mon Apr 18 20:25:06 2022
+           Launch directory: /home/ogawa/FEP/20211217_ITK_YCU_ABFEP_v21-4/absolute_binding_Ina-K-run02
+               $SCHRODINGER: /home/schrodinger/SCHRODINGER_2021-4
+               $OPLS_DIR: custom_2021_4.opls
+
+Parsing the multisim script file...
+
+Summary of user stages:
+  stage 1 - task
+  stage 2 - forcefield_builder_launcher
+  stage 3 - fep_absolute_binding_md_launcher
+  stage 4 - fep_absolute_binding_fep_launcher
+  stage 5 - fep_absolute_binding_analysis
+(5 stages in total)
+
+Workflow is started now.
+
+Stage 1 - task
+stage[1] task: Detecting system type...
+stage[1] task:   It seems 
+stage[1] task: Recognizing traits of system...
+stage[1] task:   (none)
+
+Stage 1 completed successfully.
+
+Stage 1 duration: 0h 0' 0"
+
+
+Stage 2 - forcefield_builder_launcher
+
+Stage 2 is skipped.
+
+
+Stage 3 - fep_absolute_binding_md_launcher
+[running at reduced cpu priority]
+
+Running subjobs on hosts:
+  sevenstar_gpu (Max: No limit)
+Number of jobs:       1
+Max retries per job:  1
+Max allowed failures: unlimited
+Verbosity:            normal
+
+Starting JobDJ...
+
+Keep one job on driver host: False
+JobDJ columns:
+  C: Number of completed subjobs
+  A: Number of active subjobs (e.g., submitted, running)
+  W: Number of waiting/pending subjobs
+
+C A W | Activity  JobId  JobName  JobHost
+- - - | --------- -----------------------
+0 1 0 | launched  sevenstar-0-625d4a96 absolute_binding_Ina-K-run02_f36da37_md sevenstar_gpu
+1 0 0 | finished  sevenstar-0-625d4a96 absolute_binding_Ina-K-run02_f36da37_md sevenstar_gpu [sevenstar]
+
+All jobs have completed.
+
+1 of 1 job(s) succeeded; 0 job(s) failed.
+
+
+Job("sevenstar-0-625d4a96") was successfully finished.
+  Host       : sevenstar_gpu:1
+  Launch time: Mon Apr 18 20:25:10 2022
+  Start time : Mon Apr 18 20:25:19 2022
+  End time   : Mon Apr 18 20:40:30 2022
+  Duration   : 0h 15' 11"
+  CPUs       : 1
+  CPU time   : 0h 15' 11"
+  Exit code  : 0
+  Jobname    : absolute_binding_Ina-K-run02_f36da37_md
+  Stage      : 3 (fep_absolute_binding_md_launcher)
+Stage 3 duration: 0h 15' 24"
+
+
+Stage 3 completed successfully.
+
+Stage 3 duration: 0h 15' 24"
+
+
+Stage 4 - fep_absolute_binding_fep_launcher
+
+Running subjobs on hosts:
+  sevenstar_gpu (Max: No limit)
+Number of jobs:       2
+Max retries per job:  1
+Max allowed failures: unlimited
+Verbosity:            normal
+
+Starting JobDJ...
+
+Keep one job on driver host: False
+JobDJ columns:
+  C: Number of completed subjobs
+  A: Number of active subjobs (e.g., submitted, running)
+  W: Number of waiting/pending subjobs
+
+C A W | Activity  JobId  JobName  JobHost
+- - - | --------- -----------------------
+0 1 1 | launched  sevenstar-0-625d4e32 absolute_binding_Ina-K-run02_f36da37_complex sevenstar_gpu
+0 2 0 | launched  sevenstar-0-625d4e36 absolute_binding_Ina-K-run02_f36da37_solvent sevenstar_gpu
+1 1 0 | finished  sevenstar-0-625d4e32 absolute_binding_Ina-K-run02_f36da37_complex sevenstar_gpu [sevenstar]
+2 0 0 | finished  sevenstar-0-625d4e36 absolute_binding_Ina-K-run02_f36da37_solvent sevenstar_gpu [sevenstar]
+
+All jobs have completed.
+
+2 of 2 job(s) succeeded; 0 job(s) failed.
+
+
+Job("sevenstar-0-625d4e32") was successfully finished.
+  Host       : sevenstar_gpu:4
+  Launch time: Mon Apr 18 20:40:34 2022
+  Start time : Mon Apr 18 20:40:49 2022
+  End time   : Tue Apr 19 05:45:42 2022
+  Duration   : 9h 4' 53"
+  CPUs       : 1
+  CPU time   : 9h 4' 53"
+  Exit code  : 0
+  Jobname    : absolute_binding_Ina-K-run02_f36da37_complex
+  Stage      : 4 (fep_absolute_binding_fep_launcher)
+Stage 4 duration: 11h 50' 10"
+
+
+Job("sevenstar-0-625d4e36") was successfully finished.
+  Host       : sevenstar_gpu:4
+  Launch time: Mon Apr 18 20:40:38 2022
+  Start time : Tue Apr 19 05:46:04 2022
+  End time   : Tue Apr 19 08:30:40 2022
+  Duration   : 2h 44' 36"
+  CPUs       : 1
+  CPU time   : 2h 44' 36"
+  Exit code  : 0
+  Jobname    : absolute_binding_Ina-K-run02_f36da37_solvent
+  Stage      : 4 (fep_absolute_binding_fep_launcher)
+Stage 4 duration: 11h 50' 10"
+
+
+Stage 4 completed successfully.
+
+Stage 4 duration: 11h 50' 10"
+
+
+Stage 5 - fep_absolute_binding_analysis
+run -FROM scisol fep_mapper_cleanup.py absolute_binding_Ina-K-run02-multisim_checkpoint -force -fmp absolute_binding_Ina-K-run02.fmp -out-fmp absolute_binding_Ina-K-run02_out.fmp
+Start cleanup...
+processing: absolute_binding_Ina-K-run02_4/absolute_binding_Ina-K-run02_f36da37_complex_16-out.tgz
+Attach sid file for f36da37_complex to out.fmp file
+processing: absolute_binding_Ina-K-run02_4/absolute_binding_Ina-K-run02_f36da37_solvent_17-out.tgz
+Attach sid file for f36da37_solvent to out.fmp file
+Writing absolute_binding_Ina-K-run02_out.fmp file...
+Cleanup done.
+   Ligand Title      Ligand Binding DG (kcal/mol)    Ligand Binding DG Error (kcal/mol)
+   --------------  ------------------------------  ------------------------------------
+   cpdK                                     -14.3                                   0.1
+Results for cpdK:
+Complex dG: 113.633+-0.0836863
+Complex correction dG: -9.38055068699979
+Solvent dG: 89.9962+-0.0604487
+Final dG: -14.2562+-0.103235
+Number of new compounds completed in the current job: 1
+
+Stage 5 completed successfully.
+
+Stage 5 duration: 0h 0' 8"
+
+Cleaning up files...
+
+Multisim summary (Tue Apr 19 08:30:50 2022):
+  Stage 1 completed.
+  Stage 2 was skipped.
+  Stage 3 completed.
+  Stage 4 completed.
+  Stage 5 completed.
+  Total duration: 12h 5' 43"
+Multisim completed.
